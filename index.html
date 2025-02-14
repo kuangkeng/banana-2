@@ -28,7 +28,7 @@ body {
   /* max-width: 800px; */
   position: relative;
   margin: 0 auto;
-  height: 600px;
+  height: 750px;
 }
 .scroll-logo {
   position:fixed;
@@ -92,14 +92,14 @@ body {
   max-width: 800px;
   margin:0 auto;
   background: rgba(0,0,0,.6);
-  margin-bottom: 600px !important;
+  margin-bottom: 750px !important;
   
 }
 
 .title {
   color:#ffc205;
   font-family: "Kelly Slab", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   margin-bottom: 0px;
 }
@@ -107,20 +107,12 @@ body {
 
 #t5{
   margin-bottom: 5% !important;
-  margin-left: 0px;
-  /* width:45%; */
-  background: rgba(255,255,255,0);
+  text-align: center;
 }
-
-/* #t6{
-  margin-left: 10px;
-  width: 45%;
-  background: rgba(255,255,255,0);
-} */
 
 h1 {
   margin-top: 0px;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 #tfirst, #tlast {
@@ -156,14 +148,9 @@ ul {
     margin-bottom: 55% !important;
   }
 
-  /* #t6{
-    margin: 0 auto;
-    width:auto;
-    background: rgba(0,0,0,.6);
-  } */
-
   .title{
-    font-size: 2em;
+    margin-top: 10px;
+    font-size: 1.6em;
     line-height: 1.2;
   }
 
@@ -201,8 +188,9 @@ ul {
             <p>However, an investigation by Mekong Eye and the Rainforest Investigation Network (RIN) reveals that the fruit plantation boom has left a legacy of soil degradation and uncertain livelihoods for many local farmers.</p> 
           </li>
           <li id="t5" class="scroll-text">
-            <p><h1 class="title">Banana Boom<br>Soil Bust</h1></p>
-            <p>This series was produced in partnership with the <img src="./img/pulitzer-logo.png" alt="Icon" class="inline-img" alt='pulitzer center logo'>.</p>
+            <h1 class="title">Banana Boom, Soil Bust</h1>
+            <p>Long-term intensive chemical use in Laos' banana farms has degraded the country’s once-fertile soil, and it may take nearly half a century to restore it.</p>
+            <p>Produced in partnership with the <img src="./img/pulitzer-logo.png" alt="Icon" class="inline-img" alt='pulitzer center logo'>.</p>
           </li>
           <li id="tlast" class="scroll-text"></li>
         </ul> 
@@ -211,6 +199,12 @@ ul {
 </div>  
 
 <script type="text/javascript">
+
+if(window.innerWidth>500){
+  img_t4="url('./img/t4d.jpg')";
+} else if(window.innerWidth<500){
+  img_t4="url('./img/t4m.jpg')";
+}  
 
 if(window.innerWidth>500){
   img_t6="url('./img/t6d.jpg')";
@@ -270,7 +264,7 @@ new Waypoint({
   handler: direction => {
     if (direction === 'down') {
       $('.imagebox').fadeTo(300, 0, function() {
-        $(this).css('background-image', 'url("./img/t4.jpg")').fadeTo(300, 1);
+        $(this).css('background-image', img_t4).fadeTo(300, 1);
       });
     } else {
       $('.imagebox').fadeTo(300, 0, function() {
@@ -286,11 +280,11 @@ new Waypoint({
   handler: direction => {
     if (direction === 'down') {
       $('.imagebox').fadeTo(300, 0, function() {
-        $(this).css('background-image', 'url("./img/t1.jpg")').fadeTo(300, 1);
+        $(this).css('background-image', 'url("./img/t5.jpg")').fadeTo(300, 1);
       });
     } else {
       $('.imagebox').fadeTo(300, 0, function() {
-        $(this).css('background-image', 'url("./img/t4.jpg")').fadeTo(300, 1);
+        $(this).css('background-image', img_t4).fadeTo(300, 1);
       });
     }
   },
